@@ -1,0 +1,5 @@
+crate_type = "lib"
+
+[module_name]
+type = "string"
+description = "Name of the lua module"

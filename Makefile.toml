@@ -1,5 +1,5 @@
 [env]
-MODULE_NAME = "module_name"
+MODULE_NAME = "{{ module_name }}"
 
 [tasks.release]
 script = '''

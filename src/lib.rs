@@ -2,7 +2,7 @@ use mlua::prelude::*;
 use nvim::Vim;
 
 #[mlua::lua_module]
-fn module_name(lua: &Lua) -> LuaResult<LuaTable> {
+fn {{ module_name }}(lua: &Lua) -> LuaResult<LuaTable> {
     let exports = lua.create_table()?;
     exports.set(
         "hello",
