@@ -16,11 +16,6 @@ cp target/release/lib${crate_name}.so lua/${module_name}.so
 dependencies = ["release"]
 script = '''
 #!@duckscript
-if is_path_exists test_proj
-else
-    exec cargo new test_proj --vcs none
-end
-cd test_proj
 module_name = get_env MODULE_NAME
 exec nvim --cmd "set runtimepath+=.." "+lua require'${module_name}'.hello()"
 '''
