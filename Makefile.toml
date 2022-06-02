@@ -20,6 +20,15 @@ module_name = get_env MODULE_NAME
 exec nvim --cmd "set runtimepath+=." "+lua require'${module_name}'.hello()"
 '''
 
+[tasks.install]
+dependencies = ["release"]
+script = '''
+#!@duckscript
+module_name = get_env MODULE_NAME
+home = get_home_dir
+cp lua/${module_name}.so ${home}/.config/nvim/lua/${module_name}.so
+'''
+
 [tasks._clean]
 script = '''
 #!@duckscript
