@@ -1,6 +1,6 @@
 [package]
 edition = "2021"
-name = "{{project_name}}"
+name = "{{ project_name | replace(from=".nvim", to="") | replace(from=".", to="_") }}"
 version = "0.1.0"
 license = "MIT"
 
